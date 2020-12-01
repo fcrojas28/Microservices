@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.frojas.pathologyservice.models.Diseases;
+import net.frojas.pathologyservice.models.DiseasesList;
 
 @RestController
 @RequestMapping("/pathology")
@@ -19,8 +20,10 @@ public class PathologyResources {
 	);
 	
 	@RequestMapping("/diseases")
-	public List<Diseases> getDiseases() {
-		return diseases;
+	public DiseasesList getDiseases() {
+		DiseasesList diseasesList = new DiseasesList();
+		diseasesList.setDiseases(diseases); 
+		return diseasesList;
 	}
 	
 	@RequestMapping("/diseases/{id}")

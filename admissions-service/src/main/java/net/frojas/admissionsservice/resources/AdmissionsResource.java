@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import net.frojas.admissionsservice.models.DiseasesList;
 import net.frojas.admissionsservice.models.EmployeesList;
 import net.frojas.admissionsservice.models.Patient;
 
@@ -28,6 +29,12 @@ public class AdmissionsResource {
 	public EmployeesList getPhysicians() {
 		return restTemplate
 			.getForObject("http://localhost:8082/hr/employees", EmployeesList.class);
+	}
+	
+	@RequestMapping("/diseases")
+	public DiseasesList getDiseases() {
+		return restTemplate
+			.getForObject("http://localhost:8083/pathology/diseases", DiseasesList.class);
 	}
 	
 	@RequestMapping("/patients")
