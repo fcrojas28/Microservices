@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.frojas.hrservice.models.Employee;
+import net.frojas.hrservice.models.EmployeesList;
 
 @RestController
 @RequestMapping("/hr")
@@ -19,8 +20,10 @@ public class HrResources {
 	);
 	
 	@RequestMapping("/employees")
-	public List<Employee> getEmployees() {
-		return employees;
+	public EmployeesList getEmployees() {
+		EmployeesList employeesList = new EmployeesList();
+		employeesList.setEmployees(employees);
+		return employeesList;
 	}
 	
 	@RequestMapping("/employees/{id}")
