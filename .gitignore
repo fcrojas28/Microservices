@@ -21,3 +21,15 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+/admissions-service/target
+/admissions-service/.mvn
+/admissions-service/bin
+
+/hr-service/target
+/hr-service/.mvn
+/hr-service/bin
+
+/pathology-service/target
+/pathology-service/.mvn
+/pathology-service/bin
