@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Say language="es-US" voice="woman">Hola, este es un ejemplo de llamada en español.</Say>
+</Response>
